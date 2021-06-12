@@ -11,6 +11,7 @@ workdir="$(mktemp -dt build_src)"
 get_latest_release() {
   local tarball_url
   local release="https://api.github.com/repos/zwave-js/zwavejs2mqtt/tarball/v4.5.2"
+  tarball_url="https://api.github.com/repos/zwave-js/zwavejs2mqtt/tarball/v4.5.2"
   echo -ne "\nDownloading latest release..."
   # shellcheck disable=SC2086
   curl -sL ${tarball_url} | tar -xzf - -C "${workdir}"
